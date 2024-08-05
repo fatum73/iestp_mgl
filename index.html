@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+      <link rel="stylesheet" href="css/navbar.css">
+      <link rel="stylesheet" href="css/slider.css">
+      <link rel="stylesheet" href="css/footer.css">
+      <title>PAGINA WEB IESTP</title>
+
+
+      <script>
+         function includeHTML(elementId, fileName, callback) {
+           fetch(fileName)
+             .then(response => response.text())
+             .then(data => {
+               document.getElementById(elementId).innerHTML = data;
+               if (callback) callback();  // Ejecuta la función de callback si se proporciona
+             })
+             .catch(error => console.log('Error:', error));
+         }
+     
+         document.addEventListener("DOMContentLoaded", function() {
+           includeHTML('navbar', 'navbar/navbar.html', function() {
+             // Código que depende del contenido del navbar
+             initializeNavbar();
+           });
+           includeHTML('footer', 'footer/footer.html', function() {
+             initializeFooter();
+           });
+           includeHTML('slider', 'slider/slider.html', function() {
+             initializeSlider();
+           });
+         });
+     
+         function initializeNavbar() {
+            const showMenu = (toggleId, navId) =>{
+   const toggle = document.getElementById(toggleId),
+         nav = document.getElementById(navId)
+
+   toggle.addEventListener('click', () =>{
+       // Add show-menu class to nav menu
+       nav.classList.toggle('show-menu')
+
+       // Add show-icon to show and hide the menu icon
+       toggle.classList.toggle('show-icon')
+   })
+}
+
+showMenu('nav-toggle','nav-menu')
+           console.log("Navbar initialized");
+           // Ejemplo: Inicializar algún componente específico del navbar
+         }
+     
+         function initializeFooter() {
+           // Tu código JS para inicializar el footer
+           console.log("Footer initialized");
+           // Ejemplo: Inicializar algún componente específico del footer
+         }
+     
+         function initializeSlider() {
+            let slideImages = document.querySelectorAll('.slides img');
+    let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+    let dots = document.querySelectorAll('.dot');
+
+    var counter = 0;
+
+    // Código para el botón de siguiente
+    next.addEventListener('click', slideNext);
+    function slideNext() {
+        slideImages[counter].classList.remove('active');
+        dots[counter].classList.remove('active');
+        counter = (counter + 1) % slideImages.length;
+        slideImages[counter].classList.add('active');
+        dots[counter].classList.add('active');
+    }
+
+    // Código para el botón de anterior
+    prev.addEventListener('click', slidePrev);
+    function slidePrev() {
+        slideImages[counter].classList.remove('active');
+        dots[counter].classList.remove('active');
+        counter = (counter - 1 + slideImages.length) % slideImages.length;
+        slideImages[counter].classList.add('active');
+        dots[counter].classList.add('active');
+    }
+
+    // Deslizamiento automático
+    function autoSliding() {
+        deletInterval = setInterval(timer, 3000);
+        function timer() {
+            slideNext();
+        }
+    }
+    autoSliding();
+
+    // Detener el deslizamiento automático cuando el mouse está encima
+    const container = document.querySelector('.slide-container');
+    container.addEventListener('mouseover', function () {
+        clearInterval(deletInterval);
+    });
+
+    // Reanudar el deslizamiento cuando el mouse está fuera
+    container.addEventListener('mouseout', autoSliding);
+
+    // Agregar evento de clic al indicador
+    function switchImage(currentImage) {
+        let imageId = parseInt(currentImage.getAttribute('attr')); // Convertir el valor del atributo a un número entero
+
+        if (imageId !== counter) {
+            slideImages[counter].classList.remove('active');
+            dots[counter].classList.remove('active');
+            counter = imageId;
+            slideImages[counter].classList.add('active');
+            dots[counter].classList.add('active');
+        }
+    }
+
+           console.log("Slider initialized");
+           // Ejemplo: Inicializar algún componente específico del slider
+         }
+       </script>
+
+
+   </head>
+   <body>
+      <div id="navbar"></div> 
+      <div id="slider"></div>
+      <div id="footer"></div>
+
+   </body>
+</html>
