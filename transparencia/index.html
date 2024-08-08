@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+   <html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap">
+      <link rel="stylesheet" href="https://fatum73.github.io/iestp_mgl/css/navbar.css">
+      <link rel="stylesheet" href="https://fatum73.github.io/iestp_mgl/css/footer.css">
+      <link rel="stylesheet" href="https://fatum73.github.io/iestp_mgl/css/transp.css">
+      <title>PAGINA WEB IESTP</title>
+      <script src="https://fatum73.github.io/iestp_mgl/scripts.js" defer></script>
+   </head>
+   <body>
+      <div id="navbar"></div> 
+      <div class="spacer"></div>
+      <div class="main-container-custom">
+        <!-- Primera Sección -->
+        <div class="section-custom">
+            <h2 class="section-title-custom" id="section1">Documentos de gestion</h2>
+            <div class="button-container-custom">
+                <button class="pdf-button" data-pdf="https://fatum73.github.io/iestp_mgl/upload/transparencia/PEI-IESTP-MGL-2022-1.pdf">PEI</button>
+                <button class="pdf-button" data-pdf="https://fatum73.github.io/iestp_mgl/upload/transparencia/PAT-IESTP-MGL-2022.pdf">PAT</button>
+                <button class="pdf-button" data-pdf="https://fatum73.github.io/iestp_mgl/upload/transparencia/REGLAMENTO-INTERNO-2022-MAGUL.pdf">RI</button>
+                <button class="pdf-button" data-pdf="https://fatum73.github.io/iestp_mgl/upload/transparencia/MPP-IESTP-MGL-2022-2.pdf">MPP</button>
+                <button class="pdf-button" data-pdf="https://fatum73.github.io/iestp_mgl/upload/transparencia/MANUAL-DE-PROCEDIMIENTOS-ACADEMICOS-1.pdf">MPA</button>
+            </div>
+        </div>
+        
+        <!-- Segunda Sección -->
+        <div class="section-custom">
+            <h2 class="section-title-custom" id="section2">Estadisticas</h2>
+            <img class="wide-image-custom" src="https://fatum73.github.io/iestp_mgl/public/img/logo.png" alt="Imagen Ancha">
+        </div>
+        
+        <!-- Tercera Sección -->
+        <div class="section-custom">
+            <h2 class="section-title-custom" id="section3">Libro de Reclamaciones</h2>
+            <form class="complaint-form-custom">
+                <h3>Identificación del Consumidor Reclamante</h3>
+                <div class="form-row-custom">
+                    <div class="form-group-custom">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group-custom">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos">
+                    </div>
+                </div>
+                <div class="form-row-custom">
+                    <div class="form-group-custom">
+                        <label for="domicilio">Domicilio *</label>
+                        <input type="text" id="domicilio" name="domicilio" required>
+                    </div>
+                    <div class="form-group-custom">
+                        <label for="dni">DNI/CE *</label>
+                        <input type="text" id="dni" name="dni" required>
+                    </div>
+                </div>
+                <div class="form-row-custom">
+                    <div class="form-group-custom">
+                        <label for="celular">Celular *</label>
+                        <input type="tel" id="celular" name="celular" required>
+                    </div>
+                    <div class="form-group-custom">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+    
+                <h3>Identificación del Bien Contratado</h3>
+                <label for="servicio_producto">Servicio o Producto *</label>
+                <select id="servicio_producto" name="servicio_producto" required>
+                    <option value="servicio">Servicio</option>
+                    <option value="producto">Producto</option>
+                </select>
+                <label for="descripcion">Descripción del Bien Contratado *</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+    
+                <h3>Detalle de la Reclamación</h3>
+                <label for="reclamo_queja">Reclamo o Queja *</label>
+                <select id="reclamo_queja" name="reclamo_queja" required>
+                    <option value="reclamo">Reclamo</option>
+                    <option value="queja">Queja</option>
+                </select>
+                <p>Reclamo: Disconformidad relacionada con los productos o servicios.</p>
+                <p>Queja: Disconformidad no relacionada con los productos o servicios; o, malestar o descontento respecto a la atención al público.</p>
+                <label for="detalle_reclamo">Detalle de la Reclamación *</label>
+                <textarea id="detalle_reclamo" name="detalle_reclamo" required></textarea>
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <!-- Segunda Sección -->
+    <div class="section-custom">
+        <h2 class="section-title-custom" id="section4">Licenciamiento</h2>
+        <img class="wide-image-custom" src="https://fatum73.github.io/iestp_mgl/upload/transparencia/licenciamiento.jpg" alt="Imagen Ancha" style="width: 60%;">
+    </div>
+    </div>
+    
+    
+
+      <div id="footer"></div>
+      <script src="abrir_pdf.js"></script>
+    </body>
+ </html>

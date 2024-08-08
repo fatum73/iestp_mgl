@@ -1,0 +1,155 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*-----------------------NOTICIAS--------------------*/
+  
+  .news-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .news-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .news-item {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .news-item img {
+    width: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .news-item p {
+    margin: 0;
+    text-align: center;
+  }
+  
+/*-------------------------CARRERAS-----------------------*/
+
+  .careers-section {
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .careers-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .careers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .career-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .career-item img {
+    width: 400px;
+    
+    transition: transform 0.3s ease;
+  }
+  
+  .career-item:hover img {
+    transform: scale(1.5);
+  }
+  
+  .career-text {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    background-size:contain;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+  }
+
+  /*-------------------BOTONES-----------------*/
+  .button-section {
+    display: flex;
+    flex-direction: column; 
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .button {
+    flex: 1; 
+    padding: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    font-size: 60px; 
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+  
+  .admission-button {
+    background-color: #007bff;
+  }
+  
+  .admission-button:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05);
+  }
+  
+  .enrollment-button {
+    background-color: #28a745;
+  }
+  
+  .enrollment-button:hover {
+    background-color: #218838; 
+    transform: scale(1.05); 
+  }
+  
+  /* Estilos para pantallas más grandes */
+  @media (min-width: 768px) {
+    .button-section {
+      flex-direction: row;
+    }
+  
+    .button {
+      margin-bottom: 0; 
+      margin-right: 0px; 
+    }
+  
+    .button:last-child {
+      margin-right: 0; 
+    }
+  }

@@ -1,0 +1,130 @@
+.main-container-custom {
+    padding: 30px;
+}
+
+/* Primera Sección */
+.section-custom {
+    margin-bottom: 40px;
+}
+
+.section-title-custom {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.button-container-custom {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre botones */
+    flex-wrap: wrap;
+}
+
+.pdf-button {
+    padding: 20px 40px; /* Botones más grandes */
+    margin: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones para hover */
+}
+
+.pdf-butto {
+    padding: 20px 40px; /* Botones más grandes */
+    margin: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones para hover */
+}
+
+.pdf-butto:hover {
+    background-color: #0056b3; /* Color de fondo en hover */
+    transform: scale(1.05); /* Efecto de crecimiento en hover */
+}
+
+.pdf-button:hover {
+    background-color: #0056b3; /* Color de fondo en hover */
+    transform: scale(1.05); /* Efecto de crecimiento en hover */
+}
+
+/* Segunda Sección */
+.wide-image-custom {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Tercera Sección */
+.complaint-form-custom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.complaint-form-custom h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.form-row-custom {
+    display: flex;
+    gap: 10px;
+}
+
+.form-group-custom {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.complaint-form-custom label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.complaint-form-custom input,
+.complaint-form-custom select,
+.complaint-form-custom textarea {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.complaint-form-custom button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .button-container-custom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wide-image-custom {
+        width: 90%;
+    }
+
+    .complaint-form-custom {
+        max-width: 90%;
+    }
+
+    .form-row-custom {
+        flex-direction: column;
+    }
+}
