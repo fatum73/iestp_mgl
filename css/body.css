@@ -68,10 +68,13 @@ body {
     overflow: hidden;
     text-decoration: none;
     color: #fff;
+    height: 400PX;
   }
   
   .career-item img {
-    width: 400px;
+    width: 500px;
+    height: 400px ;
+    overflow: hidden;
     
     transition: transform 0.3s ease;
   }
